@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reporte de Encuesta - Proyecto-END</title>
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/forms.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<h1>Reporte de Encuesta</h1>
+<nav><a href="/index.html">← Volver</a></nav>
+</div>
+</header>
+
+
+<main class="container">
+<section class="report-controls form-card">
+<label>Selecciona cargo / pregunta
+<select id="report-select-cargo"></select>
+</label>
+<div class="form-actions">
+<button id="generar-grafico">Generar gráfico</button>
+<button id="export-reporte-json">Exportar reporte JSON</button>
+<button id="export-reporte-txt">Exportar reporte TXT</button>
+</div>
+</section>
+
+
+<section class="report-area">
+<h3>Gráfico</h3>
+<canvas id="chart-cargo" width="600" height="300"></canvas>
+
+
+<h3>Tabla de resultados</h3>
+<table id="tabla-reporte">
+<thead><tr><th>Opción</th><th>Votos</th><th>%</th></tr></thead>
+<tbody></tbody>
+</table>
+</section>
+</main>
+
+
+<script src="/js/storage.js"></script>
+<script src="/js/reporte.js"></script>
+</body>
+</html>

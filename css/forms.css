@@ -1,0 +1,8 @@
+/* forms.css - estilos para formularios */
+label{display:block; margin-bottom:10px}
+input[type=text], input[type=email], textarea, select{width:100%; padding:8px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box}
+textarea{min-height:80px}
+.form-actions{display:flex; gap:8px; margin-top:12px; flex-wrap:wrap}
+.opciones-actions{margin-bottom:8px}
+#lista-opciones li{list-style:none; margin:4px 0; display:flex; gap:8px; align-items:center}
+#lista-opciones button{background:#ef4444}

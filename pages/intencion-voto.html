@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Intención de Voto - Proyecto-END</title>
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/forms.css" />
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<h1>Registro de Intención de Voto</h1>
+<nav><a href="/index.html">← Volver</a></nav>
+</div>
+</header>
+
+
+<main class="container">
+<form id="form-intencion" class="form-card">
+<label>Selecciona participante
+<select id="select-participante"></select>
+</label>
+
+
+<label>Selecciona cargo / pregunta
+<select id="select-cargo"></select>
+</label>
+
+
+<label>Selecciona opción
+<select id="select-opcion"></select>
+</label>
+
+
+<div class="form-actions">
+<button type="submit">Guardar intención</button>
+<button type="button" id="export-intencion-json">Exportar JSON</button>
+</div>
+</form>
+
+
+<section>
+<h3>Intenciones registradas</h3>
+<table id="tabla-intenciones">
+<thead><tr><th>Participante</th><th>Cargo</th><th>Opción</th></tr></thead>
+<tbody></tbody>
+</table>
+</section>
+</main>
+
+
+<script src="/js/storage.js"></script>
+<script src="/js/intencion.js"></script>
+</body>
+</html>

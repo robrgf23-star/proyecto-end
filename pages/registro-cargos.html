@@ -3,51 +3,47 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Registro de Participantes - Proyecto-END</title>
+<title>Registro de Cargos - Proyecto-END</title>
 <link rel="stylesheet" href="/css/style.css" />
 <link rel="stylesheet" href="/css/forms.css" />
 </head>
 <body>
 <header class="site-header">
 <div class="container">
-<h1>Registro de Participantes</h1>
+<h1>Registro de Cargos / Preguntas</h1>
 <nav><a href="/index.html">← Volver</a></nav>
 </div>
 </header>
 
 
 <main class="container">
-<form id="form-participante" class="form-card">
-<label>Email<input type="email" id="email" required></label>
-<label>Nombre<input id="nombre" required></label>
-<label>Apellido<input id="apellido" required></label>
-<label>Campo 1<input id="campo1"></label>
-<label>Campo 2<input id="campo2"></label>
-<label>Campo 3<input id="campo3"></label>
+<form id="form-cargo" class="form-card">
+<label>Nombre del cargo / pregunta<input id="cargo-nombre" required></label>
+<label>Descripción<textarea id="cargo-desc"></textarea></label>
+<label>Agregar opción (aspirante / respuesta)<input id="opcion-text"></label>
+<div class="opciones-actions">
+<button type="button" id="agregar-opcion">Agregar opción</button>
+</div>
+
+
+<ul id="lista-opciones"></ul>
 
 
 <div class="form-actions">
-<button type="submit">Guardar participante</button>
-<button type="button" id="export-json">Exportar JSON</button>
-<button type="button" id="export-txt">Exportar TXT</button>
-<button type="button" id="limpiar">Limpiar datos</button>
+<button type="submit">Guardar cargo</button>
+<button type="button" id="export-cargos-json">Exportar JSON</button>
 </div>
 </form>
 
 
-<section class="list-section">
-<h3>Lista de participantes</h3>
-<table id="tabla-participantes">
-<thead>
-<tr><th>Email</th><th>Nombre</th><th>Apellido</th><th>Campos</th></tr>
-</thead>
-<tbody></tbody>
-</table>
+<section>
+<h3>Cargos registrados</h3>
+<div id="cargos-listado"></div>
 </section>
 </main>
 
 
 <script src="/js/storage.js"></script>
-<script src="/js/participantes.js"></script>
+<script src="/js/cargos.js"></script>
 </body>
 </html>

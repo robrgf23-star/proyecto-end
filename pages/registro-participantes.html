@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Registro de Participantes - Proyecto-END</title>
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/forms.css" />
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<h1>Registro de Participantes</h1>
+<nav><a href="/index.html">← Volver</a></nav>
+</div>
+</header>
+
+
+<main class="container">
+<form id="form-participante" class="form-card">
+<label>Email<input type="email" id="email" required></label>
+<label>Nombre<input id="nombre" required></label>
+<label>Apellido<input id="apellido" required></label>
+<label>Campo 1<input id="campo1"></label>
+<label>Campo 2<input id="campo2"></label>
+<label>Campo 3<input id="campo3"></label>
+
+
+<div class="form-actions">
+<button type="submit">Guardar participante</button>
+<button type="button" id="export-json">Exportar JSON</button>
+<button type="button" id="export-txt">Exportar TXT</button>
+<button type="button" id="limpiar">Limpiar datos</button>
+</div>
+</form>
+
+
+<section class="list-section">
+<h3>Lista de participantes</h3>
+<table id="tabla-participantes">
+<thead>
+<tr><th>Email</th><th>Nombre</th><th>Apellido</th><th>Campos</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+</main>
+
+
+<script src="/js/storage.js"></script>
+<script src="/js/participantes.js"></script>
+</body>
+</html>
